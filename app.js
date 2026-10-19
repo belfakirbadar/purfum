@@ -325,7 +325,13 @@ var I18N = {
     footerLinkFormats: 'Nos Formats',
     footerSocialTitle: 'Contact & Commandes',
     footerCopy: '© 2026 Abdeperfumes Maroc — Des parfums qui vous ressemblent. Livraison partout au Maroc.',
-    vipWaText: 'WhatsApp VIP'
+    vipWaText: 'WhatsApp VIP',
+    techwebBadge: 'Agence Digitale Officielle • Ouarzazate, Maroc',
+    techwebDesc: 'Ce site web officiel a été entièrement conçu, développé et optimisé par l\'agence digitale <strong>TechWeb</strong> à Ouarzazate. Architecture sur-mesure ultra-fluide, synchronisation Google Sheets en temps réel et expérience e-commerce haut de gamme.',
+    techwebBtnVisit: 'Découvrir l\'Agence TechWeb',
+    techwebBtnContact: 'Lancer un Projet (+212 711-218301)',
+    seoLocalTitle: 'Abdeperfumes Ouarzazate — Haute Parfumerie & Extraits de Parfum au Maroc',
+    seoLocalDesc: 'Fondée par <strong>Abdelghani El Mahjouby</strong> (&lrm;عبد الغني المحجوبي&lrm;) à <strong>Ouarzazate</strong>, la maison <strong>Abdeperfumes</strong> est spécialisée dans la création et la distribution d\'extraits de parfum d\'exception à haute concentration (30% d\'essences pures). Formats nomades 30ml (30 MAD) et prestige 50ml (50 MAD) avec tenue supérieure à 24 heures. Commandes en ligne livrées rapidement à Casablanca, Rabat, Marrakech, Ouarzazate, Fès, Tanger, Agadir et sur l\'ensemble du territoire marocain. Plateforme digitale officielle réalisée par l\'agence web <strong>TechWeb Ouarzazate</strong>.'
   },
   ar: {
     dir: 'rtl',
@@ -417,7 +423,13 @@ var I18N = {
     footerLinkFormats: 'الأحجام المتوفرة',
     footerSocialTitle: 'التواصل والطلبات',
     footerCopy: '© 2026 Abdeperfumes المغرب — عطور تشبه شخصيتك. توصيل لجميع المدن.',
-    vipWaText: 'واتساب VIP'
+    vipWaText: 'واتساب VIP',
+    techwebBadge: 'الوكالة الرقمية الرسمية • ورزازات، المغرب',
+    techwebDesc: 'تم تصميم وتطوير وتحسين هذه المنصة الرسمية بالكامل من طرف وكالة <strong>TechWeb</strong> الرقمية بمدينة ورزازات. بنية برمجية فائقة السرعة، ربط مباشر مع Google Sheets وتجربة تسوق إلكتروني متكاملة.',
+    techwebBtnVisit: 'زيارة موقع وكالة TechWeb',
+    techwebBtnContact: 'بدء مشروع جديد (+212 711-218301)',
+    seoLocalTitle: 'دار عبدو للعطور (Abdeperfumes) ورزازات — عطور فاخرة ومركزة بالمغرب',
+    seoLocalDesc: 'تأسست دار <strong>Abdeperfumes</strong> بمدينة <strong>ورزازات</strong> (جهة درعة تافيلالت) بإشراف <strong>عبد الغني المحجوبي</strong>، لتقديم تشكيلة حصرية من 34 عطراً مركزاً بنسبة نقاء 30% مع ثبات يتجاوز 24 ساعة. متوفرة بحجم 30 مل (30 درهم) و 50 مل (50 درهم). خدمة توصيل سريع وموثوق إلى الدار البيضاء، الرباط، مراكش، ورزازات، طنجة، فاس، أكادير وكافة مدن المملكة المغربية. تم تطوير الموقع الرسمي بواسطة وكالة <strong>TechWeb ورزازات</strong>.'
   },
   en: {
     dir: 'ltr',
@@ -509,7 +521,13 @@ var I18N = {
     footerLinkFormats: 'Our Formats',
     footerSocialTitle: 'Contact & Orders',
     footerCopy: '© 2026 Abdeperfumes Morocco — Fragrances that define your signature. Delivery across Morocco.',
-    vipWaText: 'WhatsApp VIP'
+    vipWaText: 'WhatsApp VIP',
+    techwebBadge: 'Official Digital Agency • Ouarzazate, Morocco',
+    techwebDesc: 'This official website was entirely engineered, designed, and optimized by the digital agency <strong>TechWeb</strong> based in Ouarzazate. Bespoke high-speed architecture, real-time Google Sheets sync, and an elite e-commerce experience.',
+    techwebBtnVisit: 'Discover TechWeb Agency',
+    techwebBtnContact: 'Start a Project (+212 711-218301)',
+    seoLocalTitle: 'Abdeperfumes Ouarzazate — Haute Parfumerie & Concentrated Fragrances in Morocco',
+    seoLocalDesc: 'Founded by <strong>Abdelghani El Mahjouby</strong> in <strong>Ouarzazate</strong> (Drâa-Tafilalet region), <strong>Abdeperfumes</strong> specializes in luxury high-concentration fragrance extracts (30% pure essences) lasting 24h+. Available in 30ml (30 MAD) and 50ml (50 MAD). Express shipping to Casablanca, Rabat, Marrakech, Ouarzazate, Tangier, Fes, Agadir, and across Morocco. Official web platform built by <strong>TechWeb Ouarzazate</strong>.'
   }
 };
 
@@ -999,6 +1017,12 @@ function applyLanguage(lang) {
   if (byId('footerSocialTitle')) { byId('footerSocialTitle').textContent = t.footerSocialTitle; }
   if (byId('footerCopy')) { byId('footerCopy').textContent = t.footerCopy; }
   if (byId('vipWaText')) { byId('vipWaText').textContent = t.vipWaText; }
+  if (byId('techwebBadge')) { byId('techwebBadge').textContent = t.techwebBadge; }
+  if (byId('techwebDesc')) { byId('techwebDesc').innerHTML = t.techwebDesc; }
+  if (byId('techwebBtnVisit')) { byId('techwebBtnVisit').textContent = t.techwebBtnVisit; }
+  if (byId('techwebBtnContact')) { byId('techwebBtnContact').textContent = t.techwebBtnContact; }
+  if (byId('seoLocalTitle')) { byId('seoLocalTitle').textContent = t.seoLocalTitle; }
+  if (byId('seoLocalDesc')) { byId('seoLocalDesc').innerHTML = t.seoLocalDesc; }
 
   renderGrid();
   renderCart();

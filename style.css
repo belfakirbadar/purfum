@@ -972,3 +972,131 @@ html[dir="rtl"] .vip-wa-btn {
     transform: scale(1.03);
   }
 }
+
+/* =============================================================
+   TECHWEB DIGITAL AGENCY FOOTER SHOWCASE (OUARZAZATE)
+   ============================================================= */
+.techweb-partner-card {
+  background: linear-gradient(135deg, rgba(3, 29, 26, 0.78) 0%, rgba(9, 12, 17, 0.94) 100%);
+  border: 1px solid rgba(0, 166, 147, 0.32);
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 166, 147, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+}
+
+.techweb-partner-card:hover {
+  border-color: rgba(212, 225, 87, 0.5);
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.7), 0 0 35px rgba(0, 166, 147, 0.22);
+}
+
+.techweb-ambient-glow {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(0, 166, 147, 0.26) 0%, rgba(212, 225, 87, 0.1) 45%, transparent 75%);
+  filter: blur(48px);
+  pointer-events: none;
+}
+
+.techweb-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(0, 166, 147, 0.14);
+  border: 1px solid rgba(0, 166, 147, 0.38);
+  color: #8DE0C7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.techweb-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: #D4E157;
+  box-shadow: 0 0 8px #D4E157;
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+    box-shadow: 0 0 14px #D4E157;
+  }
+}
+
+.techweb-perf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #E2E8F0;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.techweb-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  background: rgba(0, 166, 147, 0.08);
+  border: 1px solid rgba(0, 166, 147, 0.28);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.techweb-logo-wrap:hover {
+  background: rgba(0, 166, 147, 0.18);
+  border-color: rgba(212, 225, 87, 0.5);
+  transform: translateY(-2px);
+}
+
+.techweb-btn-primary {
+  background: linear-gradient(135deg, #00A693 0%, #3DA66F 50%, #D4E157 100%);
+  color: #03211C;
+  font-weight: 800;
+  transition: all 0.3s var(--ease-out);
+  box-shadow: 0 10px 24px -6px rgba(0, 166, 147, 0.4);
+}
+
+.techweb-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -6px rgba(212, 225, 87, 0.5);
+  color: #011411;
+}
+
+.techweb-btn-outline {
+  background: rgba(0, 166, 147, 0.08);
+  border: 1px solid rgba(0, 166, 147, 0.35);
+  color: #F1F5F9;
+  transition: all 0.3s var(--ease-out);
+}
+
+.techweb-btn-outline:hover {
+  background: rgba(0, 166, 147, 0.18);
+  border-color: rgba(212, 225, 87, 0.6);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.seo-local-block {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
