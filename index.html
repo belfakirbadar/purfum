@@ -12,44 +12,25 @@
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
 
-  <!-- Google Fonts: Cormorant Garamond + Syne + Plus Jakarta Sans + Alexandria + Amiri -->
+  <!-- LCP Hero Image Preload for 95+ Performance -->
+  <link rel="preload" as="image" href="50-1.jpeg" fetchpriority="high" />
+
+  <!-- Google Fonts: Asynchronous non-render-blocking luxury typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </noscript>
 
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            obsidian: '#0A0A0C',
-            charcoal: '#121216',
-            velvet: '#18181F',
-            alabaster: '#F8F9FA',
-            cashmere: '#F4F3EF',
-            champagne: '#C5A059',
-            goldlight: '#DFBD78',
-            sage: '#8A9A86'
-          },
-          fontFamily: {
-            display: ['Syne', 'sans-serif'],
-            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            arabic: ['Alexandria', 'Readex Pro', 'sans-serif'],
-            arabicSerif: ['Amiri', 'serif']
-          }
-        }
-      }
-    };
-  </script>
+  <!-- Static High-Performance Tailwind CSS (Zero Runtime CPU Overhead) -->
+  <link rel="stylesheet" href="tailwind.min.css" />
 
   <!-- Custom Studio Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -73,31 +54,31 @@
   </div>
 
   <!-- =========================================================
-       FLOATING LUXURY NAVBAR (ZERO PHONE NUMBER CLUTTER)
+       FLOATING LUXURY NAVBAR (COMPACT & RESPONSIVE ON MOBILE)
        ========================================================= -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 pt-3 transition-all duration-500">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-2.5 sm:px-4 pt-2.5 sm:pt-3 transition-all duration-500">
     <div
-      class="navbar-glass max-w-[1380px] mx-auto h-[72px] rounded-full px-5 md:px-8 flex items-center justify-between gap-4">
+      class="navbar-glass max-w-[1380px] mx-auto h-[62px] sm:h-[70px] md:h-[72px] rounded-full px-3 sm:px-5 md:px-8 flex items-center justify-between gap-1.5 sm:gap-4">
 
       <!-- Brand Logo (Official Gold Monogram Emblem) -->
-      <a href="#" class="flex items-center gap-3.5 group" aria-label="Abdeperfumes">
+      <a href="#" class="flex items-center gap-2 sm:gap-3.5 group shrink-0" aria-label="Abdeperfumes">
         <div
-          class="relative w-11 h-11 md:w-12 md:h-12 rounded-2xl overflow-hidden border border-champagne/40 bg-obsidian/90 shadow-[0_0_18px_rgba(197,160,89,0.22)] flex items-center justify-center p-1 group-hover:border-champagne group-hover:shadow-[0_0_28px_rgba(197,160,89,0.5)] group-hover:scale-105 transition-all duration-500">
-          <img src="logo.png" onerror="this.onerror=null;this.src='logo.jpeg';" alt="Abdeperfumes Logo"
+          class="relative w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-xl sm:rounded-2xl overflow-hidden border border-champagne/40 bg-obsidian/90 shadow-[0_0_18px_rgba(197,160,89,0.22)] flex items-center justify-center p-0.5 sm:p-1 group-hover:border-champagne group-hover:shadow-[0_0_28px_rgba(197,160,89,0.5)] group-hover:scale-105 transition-all duration-500 shrink-0">
+          <img src="logo.png" width="48" height="48" onerror="this.onerror=null;this.src='logo.jpeg';" alt="Abdeperfumes Logo"
             class="w-full h-full object-contain" />
         </div>
         <div class="flex flex-col">
           <span
-            class="font-serif text-xl md:text-2xl font-semibold tracking-wide text-champagne leading-none group-hover:text-goldlight transition-colors">
+            class="font-serif text-base sm:text-xl md:text-2xl font-semibold tracking-wide text-champagne leading-none group-hover:text-goldlight transition-colors whitespace-nowrap">
             Abdeperfumes
           </span>
-          <span class="text-[9px] uppercase tracking-[0.22em] opacity-65 mt-0.5" id="navSubTag">
+          <span class="text-[8px] sm:text-[9px] uppercase tracking-[0.16em] sm:tracking-[0.22em] opacity-65 mt-0.5 hidden xs:block" id="navSubTag">
             Haute Parfumerie
           </span>
         </div>
       </a>
 
-      <!-- Center Navigation Links -->
+      <!-- Center Navigation Links (Desktop Only) -->
       <nav class="hidden lg:flex items-center gap-1 p-1.5 rounded-full nav-pill-box" aria-label="Navigation">
         <a href="#catalogue" data-filter="all" id="navLinkAll"
           class="nav-pill-link px-4 py-2 rounded-full text-xs font-semibold tracking-wide">
@@ -121,34 +102,34 @@
         </a>
       </nav>
 
-      <!-- Right Controls: Language + Theme + Instagram SVG + Cart -->
-      <div class="flex items-center gap-2 md:gap-3">
+      <!-- Right Controls: Language + Theme + Instagram SVG + Cart + Burger -->
+      <div class="flex items-center gap-1 sm:gap-2 md:gap-3 shrink-0">
 
         <!-- Language Switcher (FR / AR / EN) -->
-        <div class="lang-box flex items-center p-1 rounded-full" role="group" aria-label="Langue">
+        <div class="lang-box flex items-center p-0.5 sm:p-1 rounded-full shrink-0" role="group" aria-label="Langue">
           <button type="button" class="lang-btn is-active" data-lang="fr">FR</button>
           <button type="button" class="lang-btn" data-lang="ar">AR</button>
           <button type="button" class="lang-btn" data-lang="en">EN</button>
         </div>
 
         <!-- Theme Switcher (Dark / Light) -->
-        <button type="button" id="themeToggleBtn" class="icon-circle-btn" aria-label="Changer le mode d'affichage"
+        <button type="button" id="themeToggleBtn" class="icon-circle-btn w-8 h-8 sm:w-10 sm:h-10 text-xs sm:text-sm shrink-0" aria-label="Changer le mode d'affichage"
           title="Mode Sombre / Clair">
-          <svg id="iconSun" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg id="iconSun" class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="4"></circle>
             <path
               d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
             </path>
           </svg>
-          <svg id="iconMoon" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          <svg id="iconMoon" class="w-3.5 h-3.5 sm:w-4 sm:h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor"
             stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        <!-- Instagram Button (Hardcoded SVG) -->
+        <!-- Instagram Button (Hidden on small mobile navbar, accessible in mobile menu and desktop) -->
         <a href="https://instagram.com/abdelghani_el_mhjouby?mdxt=MW9sc2VjZGhnMDlscw%3D%3D" target="_blank"
-          rel="noopener noreferrer" class="icon-circle-btn" aria-label="Instagram Abdeperfumes" title="Instagram">
+          rel="noopener noreferrer" class="icon-circle-btn w-8 h-8 sm:w-10 sm:h-10 text-xs sm:text-sm shrink-0 hidden md:inline-flex" aria-label="Instagram Abdeperfumes" title="Instagram">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -159,8 +140,8 @@
 
         <!-- Shopping Bag Button -->
         <button type="button" id="cartBtn"
-          class="btn-gold-pill flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-bold tracking-wide">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          class="btn-gold-pill flex items-center justify-center gap-1.5 w-8 h-8 sm:w-auto px-0 sm:px-4 py-0 sm:py-2.5 rounded-full text-xs font-bold tracking-wide shrink-0 relative" aria-label="Panier">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
@@ -170,8 +151,8 @@
         </button>
 
         <!-- Mobile Menu Trigger -->
-        <button type="button" id="navBurger" class="lg:hidden icon-circle-btn" aria-label="Menu">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button type="button" id="navBurger" class="lg:hidden icon-circle-btn w-8 h-8 sm:w-10 sm:h-10 text-xs sm:text-sm shrink-0" aria-label="Menu">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="7" x2="21" y2="7"></line>
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="17" x2="21" y2="17"></line>
@@ -181,17 +162,52 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileNav" class="mobile-menu-box max-w-[1380px] mx-auto mt-2 rounded-3xl p-6 hidden flex-col gap-3">
-      <a href="#catalogue" data-filter="all" id="mobLinkAll"
-        class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/15">Catalogue Complet (34)</a>
-      <a href="#catalogue" data-filter="50ml" id="mobLink50"
-        class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/15">Collection 50ml (23)</a>
-      <a href="#catalogue" data-filter="30ml" id="mobLink30"
-        class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/15">Collection 30ml (11)</a>
-      <a href="#savoir-faire" id="mobLinkSavoir"
-        class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/15">Notre Signature</a>
-      <a href="#collections" id="mobLinkFormats" class="mobile-nav-link py-2.5 text-sm font-semibold">Formats 30ml &amp;
-        50ml</a>
+    <div id="mobileNav" class="mobile-menu-box max-w-[1380px] mx-auto mt-2 rounded-3xl p-5 hidden flex-col gap-3 shadow-2xl border border-champagne/25 backdrop-blur-xl">
+      <div class="flex flex-col gap-1 pb-3 border-b border-champagne/15">
+        <a href="#catalogue" data-filter="all" id="mobLinkAll"
+          class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/10 flex items-center justify-between">
+          <span>Catalogue Complet (34)</span>
+          <span class="text-xs text-champagne opacity-75">30 / 50 MAD</span>
+        </a>
+        <a href="#catalogue" data-filter="50ml" id="mobLink50"
+          class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/10 flex items-center justify-between">
+          <span>Collection 50ml (23)</span>
+          <span class="text-xs text-champagne opacity-75">50 MAD</span>
+        </a>
+        <a href="#catalogue" data-filter="30ml" id="mobLink30"
+          class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/10 flex items-center justify-between">
+          <span>Collection 30ml (11)</span>
+          <span class="text-xs text-champagne opacity-75">30 MAD</span>
+        </a>
+        <a href="#savoir-faire" id="mobLinkSavoir"
+          class="mobile-nav-link py-2.5 text-sm font-semibold border-b border-champagne/10">Notre Signature</a>
+        <a href="#collections" id="mobLinkFormats" class="mobile-nav-link py-2.5 text-sm font-semibold">Formats 30ml &amp;
+          50ml</a>
+      </div>
+
+      <!-- Mobile Quick Actions: Instagram & WhatsApp -->
+      <div class="pt-1 flex items-center justify-between gap-3">
+        <a href="https://instagram.com/abdelghani_el_mhjouby?mdxt=MW9sc2VjZGhnMDlscw%3D%3D" target="_blank"
+          rel="noopener noreferrer"
+          class="btn-studio-outline flex-1 py-2.5 px-3 rounded-full text-xs font-semibold inline-flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://wa.me/212609539103" target="_blank" rel="noopener noreferrer"
+          class="btn-whatsapp-order flex-1 py-2.5 px-3 rounded-full text-xs font-semibold inline-flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.917.918l4.462-1.494A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.24 0-4.326-.724-6.022-1.955a.75.75 0 00-.63-.112l-3.2 1.07 1.071-3.198a.75.75 0 00-.112-.632A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+          </svg>
+          <span>WhatsApp VIP</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -327,7 +343,7 @@
 
             <!-- Main Featured Bottle -->
             <div class="studio-photo-frame w-60 h-72 md:w-64 md:h-80 relative z-10">
-              <img src="50-1.jpeg" alt="Flacon Signature Abdeperfumes" id="heroBottleImg"
+              <img src="50-1.jpeg" width="256" height="320" fetchpriority="high" decoding="async" alt="Flacon Signature Abdeperfumes" id="heroBottleImg"
                 class="studio-bottle-photo w-full h-full object-cover" />
               <div class="studio-vignette-mask" aria-hidden="true"></div>
             </div>
@@ -335,7 +351,7 @@
             <!-- Secondary Floating Bottle Left (30ml) -->
             <div
               class="studio-photo-frame w-36 h-44 absolute left-1 md:left-3 bottom-4 z-20 -rotate-6 hidden sm:block shadow-2xl">
-              <img src="30-1.jpeg" alt="Format 30ml Abdeperfumes"
+              <img src="30-1.jpeg" width="144" height="176" loading="lazy" decoding="async" alt="Format 30ml Abdeperfumes"
                 class="studio-bottle-photo w-full h-full object-cover" />
               <div class="studio-vignette-mask" aria-hidden="true"></div>
             </div>
@@ -553,9 +569,9 @@
             class="studio-card rounded-3xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center cursor-pointer group"
             data-filter-trigger="30ml">
             <div class="sm:col-span-5 studio-photo-frame aspect-[4/5] w-full">
-              <img src="30-1.jpeg" alt="Collection 30ml Abdeperfumes"
+              <img src="30-1.jpeg" width="300" height="375" alt="Collection 30ml Abdeperfumes"
                 class="studio-bottle-photo w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy" />
+                loading="lazy" decoding="async" />
               <div class="studio-vignette-mask" aria-hidden="true"></div>
               <span class="absolute top-3 left-3 z-20 badge-gold">30 MAD</span>
             </div>
@@ -585,9 +601,9 @@
             class="studio-card rounded-3xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center cursor-pointer group"
             data-filter-trigger="50ml">
             <div class="sm:col-span-5 studio-photo-frame aspect-[4/5] w-full">
-              <img src="50-1.jpeg" alt="Collection 50ml Abdeperfumes"
+              <img src="50-1.jpeg" width="300" height="375" alt="Collection 50ml Abdeperfumes"
                 class="studio-bottle-photo w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy" />
+                loading="lazy" decoding="async" />
               <div class="studio-vignette-mask" aria-hidden="true"></div>
               <span class="absolute top-3 left-3 z-20 badge-gold">50 MAD</span>
             </div>
@@ -814,8 +830,8 @@
     </span>
   </a>
 
-  <!-- Main Application Script -->
-  <script src="app.js"></script>
+  <!-- Main Application Script (Deferred for maximum PageSpeed) -->
+  <script src="app.js" defer></script>
 </body>
 
 </html>

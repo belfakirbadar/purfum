@@ -1046,7 +1046,7 @@ function renderGrid() {
     html +=
       '<article class="product-card group reveal-item' + (isOut ? ' is-out-of-stock' : '') + '" data-id="' + p.id + '">' +
       '<div class="studio-photo-frame aspect-[4/5] mb-4 cursor-pointer relative" data-action="quickview" data-id="' + p.id + '">' +
-      '<img src="' + imgSrc + '" alt="' + displayName + '" loading="lazy" class="studio-bottle-photo w-full h-full object-cover" />' +
+      '<img src="' + imgSrc + '" alt="' + displayName + '" width="300" height="375" loading="lazy" decoding="async" class="studio-bottle-photo w-full h-full object-cover" />' +
       '<div class="studio-vignette-mask" aria-hidden="true"></div>' +
       '<span class="absolute top-3 left-3 z-20 ' + (isOut ? 'badge-soldout' : 'badge-gold') + '">' + (isOut ? t.soldOut : displayFormat) + '</span>' +
       '<button type="button" data-action="quickview" data-id="' + p.id + '" class="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 px-4 py-1.5 rounded-full bg-obsidian/90 border border-champagne/40 text-[11px] font-bold text-alabaster opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg">' +
@@ -1268,7 +1268,13 @@ function init() {
   applyLanguage(state.lang);
   initSpotlight();
   bind3DTilt();
-  syncFromGoogleSheets();
+  
+  /* Defer Google Sheets sync so initial page paint is instantaneous */
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function () { syncFromGoogleSheets(); });
+  } else {
+    setTimeout(syncFromGoogleSheets, 1200);
+  }
 
   if (byId('themeToggleBtn')) {
     byId('themeToggleBtn').addEventListener('click', function () {
@@ -1285,9 +1291,17 @@ function init() {
   var burger = byId('navBurger');
   var mobNav = byId('mobileNav');
   if (burger && mobNav) {
-    burger.addEventListener('click', function () {
+    burger.addEventListener('click', function (e) {
+      e.stopPropagation();
       mobNav.classList.toggle('hidden');
       mobNav.classList.toggle('flex');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!mobNav.classList.contains('hidden') && !mobNav.contains(e.target) && !burger.contains(e.target)) {
+        mobNav.classList.add('hidden');
+        mobNav.classList.remove('flex');
+      }
     });
   }
 
