@@ -61,12 +61,17 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--nav-h) + 24px);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
+  width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  position: relative;
   background-color: var(--bg-page);
   background-image:
     radial-gradient(ellipse at 88% 10%, rgba(169, 132, 62, 0.12), transparent 45rem),
@@ -2356,8 +2361,10 @@ html[dir="rtl"][data-theme="dark"] .modal-card__img-wrap::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 14px;
   margin-top: 8px;
+  width: 100%;
 }
 
 .modal-card__price {
@@ -2683,29 +2690,84 @@ html[dir="rtl"] .footer__link:hover {
 
 @media (max-width: 860px) {
   :root {
-    --nav-h: 70px;
+    --nav-h: 66px;
+  }
+
+  .navbar {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
   }
 
   .navbar__inner {
-    padding-inline: 18px;
+    padding-inline: 14px;
+    gap: 8px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .navbar__brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .navbar__logo-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .navbar__subtitle {
+    display: none !important;
+  }
+
+  .navbar__wordmark {
+    font-size: 20px !important;
   }
 
   .navbar__nav {
     display: none !important;
   }
 
+  .navbar__actions {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  /* Hide redundant desktop language capsule & theme button from sticky topbar on mobile */
+  .navbar__actions .lang-switch,
+  .navbar__actions .theme-toggle-btn {
+    display: none !important;
+  }
+
+  /* Compact Cart Capsule Button on Mobile */
+  .navbar__cart-capsule {
+    min-height: 38px;
+    height: 38px;
+    padding: 0 12px;
+    gap: 6px;
+    border-radius: 99px;
+  }
+
+  .navbar__cart-label {
+    display: none !important;
+  }
+
   .navbar__burger {
-    width: 42px;
-    height: 42px;
-    padding: 11px;
+    width: 38px;
+    height: 38px;
+    padding: 9px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
+    gap: 4px;
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: 10px;
     background: #FFFFFF;
     box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
   }
 
   .navbar__burger span {
@@ -2890,18 +2952,67 @@ html[dir="rtl"] .footer__link:hover {
     background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.88) 75%, #FFFFFF 100%);
   }
 
+  .modal-overlay {
+    padding: 12px;
+  }
+
   .modal-card {
     grid-template-columns: 1fr;
-    max-height: 94vh;
+    max-height: 90vh;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .modal-card__img-wrap {
-    min-height: 220px;
+    min-height: 190px;
+    max-height: 220px;
+    height: 200px;
+    border-inline-end: none;
+    border-bottom: 1px solid var(--border);
   }
 
   .modal-card__img-wrap img {
     height: 100%;
-    min-height: 220px;
+    min-height: auto;
+    object-fit: contain;
+    padding: 10px;
+    transform: none;
+  }
+
+  .modal-card__info {
+    padding: 18px 16px 22px;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .modal-card__name {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .modal-card__price-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .modal-card__price {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #modalAddCart {
+    width: 100%;
+    min-height: 48px;
+    justify-content: center;
+    font-size: 13px;
+    padding: 0 16px;
   }
 
   .footer__inner {
@@ -4398,6 +4509,18 @@ html[dir="rtl"] .collection-card__img-wrap::after {
 
   .btn-card-add {
     width: 100%;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 10px;
+    font-size: 11px;
+    border-radius: 99px;
+  }
+
+  .btn-card-add span {
+    display: inline !important;
   }
 
   .hero {
