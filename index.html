@@ -400,15 +400,20 @@
 
     <!-- Mobile Drawer Nav (Hidden on Desktop) -->
     <nav class="navbar__mobile-nav" id="mobileNav" aria-hidden="true">
+      <div class="mobile-nav__lang-box">
+        <span class="mobile-nav__lang-tag" data-i18n="nav_lang_choice">Langue / اللغة</span>
+        <div class="mobile-nav__lang">
+          <button type="button" class="lang-btn is-active" data-lang="fr">Français</button>
+          <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+          <button type="button" class="lang-btn" data-lang="en">English</button>
+        </div>
+      </div>
+      <div class="mobile-nav__divider"></div>
       <a href="#savoir-faire" class="mobile-nav-link" data-i18n="nav_savoir_faire">Savoir-Faire</a>
       <a href="#catalogue" class="mobile-nav-link" data-i18n="nav_catalogue">Catalogue</a>
       <a href="#collections" class="mobile-nav-link" data-i18n="nav_collections">Collections 30ml &amp; 50ml</a>
       <a href="#guide-olfactif" class="mobile-nav-link" data-i18n="nav_guide">Guide Olfactif &amp; FAQ</a>
-      <div class="mobile-nav__lang">
-        <button type="button" class="lang-btn is-active" data-lang="fr">Français</button>
-        <button type="button" class="lang-btn" data-lang="ar">العربية</button>
-        <button type="button" class="lang-btn" data-lang="en">English</button>
-      </div>
+      <div class="mobile-nav__divider"></div>
       <div class="mobile-nav__theme">
         <button type="button" class="mobile-theme-btn" id="mobileThemeToggle" aria-label="Changer de thème">
           <span class="theme-icon theme-icon--sun" aria-hidden="true"><i data-lucide="sun"></i></span>

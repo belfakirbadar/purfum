@@ -503,6 +503,7 @@ var HERO_FEATURED = [
 var I18N = {
   fr: {
     nav_brand_tagline: 'Haute Parfumerie · Maroc',
+    nav_lang_choice: 'Langue de navigation',
     nav_savoir_faire: 'Savoir-Faire',
     nav_catalogue: 'Catalogue',
     nav_collections: 'Collections',
@@ -631,6 +632,7 @@ var I18N = {
   },
   ar: {
     nav_brand_tagline: 'الدار المغربية للعطور الفاخرة',
+    nav_lang_choice: 'اختر لغة الموقع',
     nav_savoir_faire: 'خبرتنا',
     nav_catalogue: 'الكتالوج',
     nav_collections: 'المجموعات',
@@ -759,6 +761,7 @@ var I18N = {
   },
   en: {
     nav_brand_tagline: 'High Perfumery · Morocco',
+    nav_lang_choice: 'Choose Language',
     nav_savoir_faire: 'Savoir-Faire',
     nav_catalogue: 'Catalogue',
     nav_collections: 'Collections',
@@ -1501,6 +1504,7 @@ function setMenu(open) {
     menu.classList.toggle('is-open', open);
     menu.setAttribute('aria-hidden', String(!open));
   }
+  document.body.classList.toggle('has-menu', open);
 }
 
 function setFormat(format) {
@@ -1519,6 +1523,9 @@ function bindInteractions() {
     var language = target.closest('.lang-btn[data-lang]');
     if (language) {
       applyLanguage(language.dataset.lang);
+      if (target.closest('.mobile-nav__lang')) {
+        setTimeout(function () { setMenu(false); }, 250);
+      }
       return;
     }
 
@@ -1535,6 +1542,12 @@ function bindInteractions() {
     if (target.closest('.mobile-nav-link')) {
       setMenu(false);
       return;
+    }
+
+    // Close menu when clicking outside navbar
+    var mobileNav = $('mobileNav');
+    if (mobileNav && mobileNav.classList.contains('is-open') && !target.closest('#navbar')) {
+      setMenu(false);
     }
 
     var formatTab = target.closest('.filter-tab[data-filter-format]');
