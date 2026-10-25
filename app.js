@@ -600,7 +600,7 @@ var I18N = {
     faq_q4: 'Comment passer commande ou demander conseil ?',
     faq_a4: 'Il vous suffit d\'ajouter vos parfums favoris au panier et de cliquer sur « Commander via WhatsApp ». Vous pouvez également nous écrire directement sur WhatsApp au +212 609 539 103 pour obtenir une recommandation olfactive personnalisée selon vos préférences (boisé, oriental, gourmand, frais).',
     faq_q5: 'Où trouver les créations Abdeperfumes à Ouarzazate ?',
-    faq_a5: 'Notre atelier est établi directement à Ouarzazate. Nous assurons une livraison locale rapide et 100% gratuite à domicile ou sur votre lieu de travail dans tous les quartiers de Ouarzazate (Tabount, Tassoumaat, Al Wahda, Hay Mohammadi, Centre-ville). Vous pouvez commander en ligne sur le site ou sur WhatsApp au +212 609 539 103.',
+    faq_a5: 'Notre atelier est établi directement à Ouarzazate. Nous assurons une livraison locale express à seulement 10 MAD à domicile ou sur votre lieu de travail dans tous les quartiers de Ouarzazate (Tabount, Tassoumaat, Al Wahda, Hay Mohammadi, Centre-ville). Vous pouvez commander en ligne sur le site ou sur WhatsApp au +212 609 539 103.',
     cart_title: 'Votre Sélection',
     cart_empty_title: 'Votre panier est vide',
     cart_empty_sub: 'Explorez notre catalogue et ajoutez vos créations préférées.',
@@ -623,7 +623,8 @@ var I18N = {
     footer_col_collections: 'Collections & Fragrances',
     footer_col_cities: 'Livraison Partout au Maroc',
     ship_city_ouarzazate: 'Ouarzazate',
-    ship_fee_free: 'Local · Gratuit',
+    ship_fee_ouarzazate: 'Local · 10 MAD',
+    ship_fee_free: 'Local · 10 MAD',
     ship_city_other: 'Autres Villes',
     ship_fee_paid: 'Payant',
     curr_mad: 'MAD',
@@ -729,7 +730,7 @@ var I18N = {
     faq_q4: 'كيف يمكنني الطلب أو استشارة الخبير؟',
     faq_a4: 'يمكنك إضافة عطرك مباشرة إلى السلة في الموقع والضغط على «إتمام الطلب عبر واتساب»، أو التواصل مباشرة مع فريقنا عبر واتساب على الرقم 0609539103 لمساعدتك في اختيار العطر المناسب لذوقك.',
     faq_q5: 'أين يمكن شراء عطور عبد بيرفيوم في ورزازات؟',
-    faq_a5: 'مقرنا الرئيسي في ورزازات. نوفر لكم خدمة توصيل سريعة ومجانية إلى باب منزلكم أو مكان عملكم في جميع أحياء ورزازات (تابونت، تاسوماعت، الوحدة، الحي المحمدي، وسط المدينة). اطلبوا عبر الموقع أو عبر واتساب على الرقم 0609539103.',
+    faq_a5: 'مقرنا الرئيسي في ورزازات. نوفر لكم خدمة توصيل محلية سريعة بـ 10 دراهم فقط إلى باب منزلكم أو مكان عملكم في جميع أحياء ورزازات (تابونت، تاسوماعت، الوحدة، الحي المحمدي، وسط المدينة). اطلبوا عبر الموقع أو عبر واتساب على الرقم 0609539103.',
     cart_title: 'سلة مشترياتك',
     cart_empty_title: 'سلتك فارغة حالياً',
     cart_empty_sub: 'تصفح الكتالوج واختر عطرك المفضل الآن.',
@@ -752,7 +753,8 @@ var I18N = {
     footer_col_collections: 'المجموعات والعطور',
     footer_col_cities: 'التوصيل لجميع مدن المغرب',
     ship_city_ouarzazate: 'ورزازات',
-    ship_fee_free: 'محلي · مجاني',
+    ship_fee_ouarzazate: 'محلي · 10 دراهم',
+    ship_fee_free: 'محلي · 10 دراهم',
     ship_city_other: 'مدن أخرى',
     ship_fee_paid: 'مدفوع',
     curr_mad: 'درهم',
@@ -858,7 +860,7 @@ var I18N = {
     faq_q4: 'How can I order or request consultation?',
     faq_a4: 'Add your selections to the online cart and click "Order via WhatsApp", or text us directly on WhatsApp at +212 609 539 103 for custom recommendations based on your preferences.',
     faq_q5: 'Where to find Abdeperfumes in Ouarzazate?',
-    faq_a5: 'Abdeperfumes is proudly based in Ouarzazate. We offer fast, free local delivery across all Ouarzazate districts (Tabount, Tassoumaat, Al Wahda, Hay Mohammadi, Downtown). Contact us directly on WhatsApp at +212 609 539 103.',
+    faq_a5: 'Abdeperfumes is proudly based in Ouarzazate. We offer fast local express delivery at only 10 MAD across all Ouarzazate districts (Tabount, Tassoumaat, Al Wahda, Hay Mohammadi, Downtown). Contact us directly on WhatsApp at +212 609 539 103.',
     cart_title: 'Your Selection',
     cart_empty_title: 'Your cart is empty',
     cart_empty_sub: 'Browse our collection and pick your favorite fragrances.',
@@ -881,7 +883,8 @@ var I18N = {
     footer_col_collections: 'Collections & Fragrances',
     footer_col_cities: 'Delivery Across Morocco',
     ship_city_ouarzazate: 'Ouarzazate',
-    ship_fee_free: 'Local · Free',
+    ship_fee_ouarzazate: 'Local · 10 MAD',
+    ship_fee_free: 'Local · 10 MAD',
     ship_city_other: 'Other Cities',
     ship_fee_paid: 'Paid',
     curr_mad: 'MAD',
@@ -1295,18 +1298,18 @@ function updateCartUI() {
   var currLabel = state.lang === 'ar' ? ' درهم' : ' MAD';
 
   var selectedZone = document.querySelector('input[name="shipZone"]:checked');
-  var zoneVal = selectedZone ? selectedZone.value : '0';
-  var isOuarzazate = (zoneVal === '0');
+  var zoneVal = selectedZone ? selectedZone.value : '10';
+  var isOuarzazate = (zoneVal === '10' || zoneVal === '0');
 
   var promoMsgEl = $('shippingPromoMsg');
   if (promoMsgEl) {
     if (isOuarzazate) {
       if (state.lang === 'ar') {
-        promoMsgEl.innerHTML = '<i data-lucide="shield-check" aria-hidden="true"></i><span>توصيل محلي سريع إلى باب منزلك في <strong>ورزازات</strong> (مجاني 100%)</span>';
+        promoMsgEl.innerHTML = '<i data-lucide="shield-check" aria-hidden="true"></i><span>توصيل محلي سريع إلى باب منزلك في <strong>ورزازات</strong> (10 دراهم فقط)</span>';
       } else if (state.lang === 'en') {
-        promoMsgEl.innerHTML = '<i data-lucide="shield-check" aria-hidden="true"></i><span>Fast express home delivery in <strong>Ouarzazate</strong> (100% Free)</span>';
+        promoMsgEl.innerHTML = '<i data-lucide="shield-check" aria-hidden="true"></i><span>Fast express home delivery in <strong>Ouarzazate</strong> (Only 10 MAD)</span>';
       } else {
-        promoMsgEl.innerHTML = '<i data-lucide="shield-check" aria-hidden="true"></i><span>Livraison locale express à domicile à <strong>Ouarzazate</strong> (Gratuit 100%)</span>';
+        promoMsgEl.innerHTML = '<i data-lucide="shield-check" aria-hidden="true"></i><span>Livraison locale express à domicile à <strong>Ouarzazate</strong> (10 MAD seulement)</span>';
       }
     } else {
       if (state.lang === 'ar') {
@@ -1337,7 +1340,8 @@ function updateCartUI() {
   var totalElement = $('cartTotal');
   if (totalElement) {
     if (isOuarzazate) {
-      totalElement.textContent = subtotal + currLabel;
+      var totalOuarzazate = count > 0 ? (subtotal + 10) : 0;
+      totalElement.textContent = totalOuarzazate + currLabel;
     } else {
       totalElement.textContent = subtotal + currLabel + (state.lang === 'ar' ? ' (+ الشحن)' : ' (+ livraison)');
     }
@@ -1421,8 +1425,8 @@ function buildWhatsAppUrl() {
   }, 0);
 
   var selectedZone = document.querySelector('input[name="shipZone"]:checked');
-  var zoneVal = selectedZone ? selectedZone.value : '0';
-  var isOuarzazate = (zoneVal === '0');
+  var zoneVal = selectedZone ? selectedZone.value : '10';
+  var isOuarzazate = (zoneVal === '10' || zoneVal === '0');
 
   var custName = ($('custName') ? $('custName').value.trim() : '');
   var custCity = ($('custCity') ? $('custCity').value.trim() : '');
@@ -1433,18 +1437,21 @@ function buildWhatsAppUrl() {
     return '• ' + name + ' (' + item.format + ') x' + item.qty + ' = ' + (item.price * item.qty) + ' MAD';
   });
 
+  var shippingFee = isOuarzazate ? 10 : 0;
+  var finalTotal = isOuarzazate ? (subtotal + shippingFee) : subtotal;
+
   var shippingLine = '';
   if (state.lang === 'ar') {
     shippingLine = isOuarzazate
-      ? '🚚 التوصيل : ورزازات (محلي - مجاني 0 درهم)'
+      ? '🚚 التوصيل : ورزازات (محلي - 10 دراهم فقط)'
       : '🚚 التوصيل : خارج ورزازات (مدفوع - حسب تعريفة شركة الإرساليات إلى مدينتكم)';
   } else if (state.lang === 'en') {
     shippingLine = isOuarzazate
-      ? '🚚 Shipping : Ouarzazate (Local - Free)'
+      ? '🚚 Shipping : Ouarzazate (Local - 10 MAD)'
       : '🚚 Shipping : Outside Ouarzazate (Paid - Carrier rate according to destination)';
   } else {
     shippingLine = isOuarzazate
-      ? '🚚 Livraison : Ouarzazate (Local - Gratuit)'
+      ? '🚚 Livraison : Ouarzazate (Locale - 10 MAD)'
       : '🚚 Livraison : Hors Ouarzazate (Payante - Selon tarif transporteur et ville)';
   }
 
@@ -1459,15 +1466,15 @@ function buildWhatsAppUrl() {
   var totalMsg = '';
   if (state.lang === 'ar') {
     totalMsg = isOuarzazate
-      ? 'المجموع الإجمالي : ' + subtotal + ' درهم (توصيل مجاني · الدفع عند الاستلام)'
+      ? 'المجموع الإجمالي : ' + finalTotal + ' درهم (شامل 10 دراهم مصاريف التوصيل المحلي · الدفع عند الاستلام)'
       : 'المجموع (المنتجات) : ' + subtotal + ' درهم + مصاريف الشحن حسب المدينة (الدفع عند الاستلام)';
   } else if (state.lang === 'en') {
     totalMsg = isOuarzazate
-      ? 'Total : ' + subtotal + ' MAD (Free delivery · Cash on Delivery)'
+      ? 'Total : ' + finalTotal + ' MAD (incl. 10 MAD local delivery · Cash on Delivery)'
       : 'Products Total : ' + subtotal + ' MAD + shipping fee by destination (Cash on Delivery)';
   } else {
     totalMsg = isOuarzazate
-      ? 'Total : ' + subtotal + ' MAD (Livraison gratuite · Paiement à la livraison)'
+      ? 'Total : ' + finalTotal + ' MAD (dont 10 MAD frais de livraison locale · Paiement à la livraison)'
       : 'Total produits : ' + subtotal + ' MAD + frais de livraison selon la ville (Paiement à la livraison)';
   }
 
@@ -1660,6 +1667,12 @@ function bindInteractions() {
     if (card) {
       openModal(card.dataset.id);
       return;
+    }
+  });
+
+  document.addEventListener('change', function (event) {
+    if (event.target && event.target.name === 'shipZone') {
+      updateCartUI();
     }
   });
 

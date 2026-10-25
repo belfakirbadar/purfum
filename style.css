@@ -3951,9 +3951,12 @@ html[data-theme="dark"] .product-card__gender--women {
   background: var(--bg-secondary);
 }
 
-.delivery-pill__fee--free {
+.delivery-pill__fee--free,
+.delivery-pill__fee--ouarzazate,
+.delivery-pill__fee--10 {
   color: #047857;
   background: rgba(16, 185, 129, 0.12);
+  font-weight: 700;
 }
 
 .delivery-pill__fee--paid {
