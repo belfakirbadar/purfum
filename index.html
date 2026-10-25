@@ -76,7 +76,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "PerfumeStore",
+        "@type": "Store",
         "@id": "https://abdeperfumes.ma/#store",
         "name": "Abdeperfumes",
         "alternateName": ["عطور عبد الفاخرة", "Abdeperfumes Maroc", "Maison Abdeperfumes"],
@@ -124,24 +124,68 @@
           "itemListElement": [
             {
               "@type": "Offer",
+              "url": "https://abdeperfumes.ma/#catalogue",
+              "price": "30",
+              "priceCurrency": "MAD",
+              "availability": "https://schema.org/InStock",
               "itemOffered": {
                 "@type": "Product",
+                "@id": "https://abdeperfumes.ma/#product-nomade-30ml",
                 "name": "Collection 30ml — Nomade",
                 "description": "Flacon nomade ultra-concentré 30ml, tenue 24h garantie.",
-                "price": "30",
-                "priceCurrency": "MAD",
-                "availability": "https://schema.org/InStock"
+                "image": "https://abdeperfumes.ma/30-1.jpeg",
+                "sku": "ABDE-NOMADE-30",
+                "category": "Extrait de Parfum",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Abdeperfumes"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://abdeperfumes.ma/#catalogue",
+                  "price": "30",
+                  "priceCurrency": "MAD",
+                  "availability": "https://schema.org/InStock",
+                  "priceValidUntil": "2027-12-31",
+                  "itemCondition": "https://schema.org/NewCondition",
+                  "seller": {
+                    "@type": "Store",
+                    "@id": "https://abdeperfumes.ma/#store"
+                  }
+                }
               }
             },
             {
               "@type": "Offer",
+              "url": "https://abdeperfumes.ma/#catalogue",
+              "price": "50",
+              "priceCurrency": "MAD",
+              "availability": "https://schema.org/InStock",
               "itemOffered": {
                 "@type": "Product",
+                "@id": "https://abdeperfumes.ma/#product-prestige-50ml",
                 "name": "Collection 50ml — Prestige",
                 "description": "Flacon de prestige 50ml haute concentration (25-35%), tenue 24h.",
-                "price": "50",
-                "priceCurrency": "MAD",
-                "availability": "https://schema.org/InStock"
+                "image": "https://abdeperfumes.ma/50-1.jpeg",
+                "sku": "ABDE-PRESTIGE-50",
+                "category": "Extrait de Parfum",
+                "brand": {
+                  "@type": "Brand",
+                  "name": "Abdeperfumes"
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "url": "https://abdeperfumes.ma/#catalogue",
+                  "price": "50",
+                  "priceCurrency": "MAD",
+                  "availability": "https://schema.org/InStock",
+                  "priceValidUntil": "2027-12-31",
+                  "itemCondition": "https://schema.org/NewCondition",
+                  "seller": {
+                    "@type": "Store",
+                    "@id": "https://abdeperfumes.ma/#store"
+                  }
+                }
               }
             }
           ]
