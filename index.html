@@ -19,7 +19,8 @@
   <meta name="geo.position" content="30.9335;-6.9370" />
   <meta name="ICBM" content="30.9335, -6.9370" />
   <meta name="theme-color" content="#ECEEF2" />
-  <link rel="canonical" href="https://abdeperfumes.ma/" />
+  <link rel="canonical" href="https://abdeperfumes.vercel.app/" />
+  <meta name="google-site-verification" content="google158106ef0263ea49" />
 
   <!-- Instant Theme Initializer (Prevents FOUC) -->
   <script>
@@ -35,27 +36,36 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abdeperfumes.ma/" />
-  <meta property="og:site_name" content="Abdeperfumes — Haute Parfumerie Maroc" />
-  <meta property="og:title" content="Abdeperfumes — Haute Parfumerie Maroc | Extraits de Parfum 30ml &amp; 50ml" />
+  <meta property="og:url" content="https://abdeperfumes.vercel.app/" />
+  <meta property="og:site_name" content="Abdeperfumes" />
+  <meta property="og:title" content="Abdeperfumes — Parfumerie Ouarzazate &amp; Maroc | Extraits de Parfum 30ml &amp; 50ml" />
   <meta property="og:description"
     content="Créations d'exception concentrées à 25-35%. Tenue 24h garantie, prix direct atelier (30 &amp; 50 MAD). Livraison partout au Maroc." />
-  <meta property="og:image" content="50-1.jpeg" />
+  <meta property="og:image" content="https://abdeperfumes.vercel.app/favicon.png" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:locale:alternate" content="ar_MA" />
   <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://abdeperfumes.ma/" />
-  <meta property="twitter:title" content="Abdeperfumes — Haute Parfumerie du Maroc" />
+  <meta property="twitter:url" content="https://abdeperfumes.vercel.app/" />
+  <meta property="twitter:title" content="Abdeperfumes — Parfumerie Ouarzazate &amp; Maroc" />
   <meta property="twitter:description"
     content="Extraits de parfum haute concentration 25-35%, tenue 24h garantie au Maroc. Formats 30ml (30 MAD) et 50ml (50 MAD)." />
-  <meta property="twitter:image" content="50-1.jpeg" />
+  <meta property="twitter:image" content="https://abdeperfumes.vercel.app/favicon.png" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" href="logo.png" />
-  <link rel="apple-touch-icon" href="logo.png" />
+  <!-- Favicons & App Icons (Google Search & Mobile Guidelines) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,13 +86,28 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://abdeperfumes.vercel.app/#website",
+        "url": "https://abdeperfumes.vercel.app/",
+        "name": "Abdeperfumes",
+        "alternateName": [
+          "Abdeperfume",
+          "عطور عبد الفاخرة",
+          "Abdeperfumes Maroc",
+          "Abdeperfumes Ouarzazate"
+        ],
+        "publisher": {
+          "@id": "https://abdeperfumes.vercel.app/#store"
+        }
+      },
+      {
         "@type": "Store",
-        "@id": "https://abdeperfumes.ma/#store",
+        "@id": "https://abdeperfumes.vercel.app/#store",
         "name": "Abdeperfumes",
         "alternateName": ["عطور عبد الفاخرة", "Abdeperfumes Maroc", "Maison Abdeperfumes"],
-        "url": "https://abdeperfumes.ma/",
-        "logo": "https://abdeperfumes.ma/logo.png",
-        "image": "https://abdeperfumes.ma/50-1.jpeg",
+        "url": "https://abdeperfumes.vercel.app/",
+        "logo": "https://abdeperfumes.vercel.app/favicon.png",
+        "image": "https://abdeperfumes.vercel.app/50-1.jpeg",
         "description": "Maison de parfum à Ouarzazate, au Maroc. Une sélection de fragrances en formats 30 ml (30 MAD) et 50 ml (50 MAD), avec livraison et paiement à la réception.",
         "telephone": "+212609539103",
         "priceRange": "30 MAD - 50 MAD",
@@ -124,16 +149,16 @@
           "itemListElement": [
             {
               "@type": "Offer",
-              "url": "https://abdeperfumes.ma/#catalogue",
+              "url": "https://abdeperfumes.vercel.app/#catalogue",
               "price": "30",
               "priceCurrency": "MAD",
               "availability": "https://schema.org/InStock",
               "itemOffered": {
                 "@type": "Product",
-                "@id": "https://abdeperfumes.ma/#product-nomade-30ml",
+                "@id": "https://abdeperfumes.vercel.app/#product-nomade-30ml",
                 "name": "Collection 30ml — Nomade",
                 "description": "Flacon nomade ultra-concentré 30ml, tenue 24h garantie.",
-                "image": "https://abdeperfumes.ma/30-1.jpeg",
+                "image": "https://abdeperfumes.vercel.app/30-1.jpeg",
                 "sku": "ABDE-NOMADE-30",
                 "category": "Extrait de Parfum",
                 "brand": {
@@ -142,7 +167,7 @@
                 },
                 "offers": {
                   "@type": "Offer",
-                  "url": "https://abdeperfumes.ma/#catalogue",
+                  "url": "https://abdeperfumes.vercel.app/#catalogue",
                   "price": "30",
                   "priceCurrency": "MAD",
                   "availability": "https://schema.org/InStock",
@@ -150,23 +175,23 @@
                   "itemCondition": "https://schema.org/NewCondition",
                   "seller": {
                     "@type": "Store",
-                    "@id": "https://abdeperfumes.ma/#store"
+                    "@id": "https://abdeperfumes.vercel.app/#store"
                   }
                 }
               }
             },
             {
               "@type": "Offer",
-              "url": "https://abdeperfumes.ma/#catalogue",
+              "url": "https://abdeperfumes.vercel.app/#catalogue",
               "price": "50",
               "priceCurrency": "MAD",
               "availability": "https://schema.org/InStock",
               "itemOffered": {
                 "@type": "Product",
-                "@id": "https://abdeperfumes.ma/#product-prestige-50ml",
+                "@id": "https://abdeperfumes.vercel.app/#product-prestige-50ml",
                 "name": "Collection 50ml — Prestige",
                 "description": "Flacon de prestige 50ml haute concentration (25-35%), tenue 24h.",
-                "image": "https://abdeperfumes.ma/50-1.jpeg",
+                "image": "https://abdeperfumes.vercel.app/50-1.jpeg",
                 "sku": "ABDE-PRESTIGE-50",
                 "category": "Extrait de Parfum",
                 "brand": {
@@ -175,7 +200,7 @@
                 },
                 "offers": {
                   "@type": "Offer",
-                  "url": "https://abdeperfumes.ma/#catalogue",
+                  "url": "https://abdeperfumes.vercel.app/#catalogue",
                   "price": "50",
                   "priceCurrency": "MAD",
                   "availability": "https://schema.org/InStock",
@@ -183,7 +208,7 @@
                   "itemCondition": "https://schema.org/NewCondition",
                   "seller": {
                     "@type": "Store",
-                    "@id": "https://abdeperfumes.ma/#store"
+                    "@id": "https://abdeperfumes.vercel.app/#store"
                   }
                 }
               }
@@ -193,7 +218,7 @@
       },
       {
         "@type": "FAQPage",
-        "@id": "https://abdeperfumes.ma/#faq",
+        "@id": "https://abdeperfumes.vercel.app/#faq",
         "mainEntity": [
           {
             "@type": "Question",
